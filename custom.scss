@@ -17,8 +17,16 @@ body.pagelayout-login div.container-fluid.pt-5.mt-0 {
     }
 
 .login-wrapper.login-wrapper-right {
-overflow:hidden;
+overflow: hidden;
 }
+
+body.pagelayout-login #page-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
 
 /*  LOGIN FORM LOGO */
 img.img-fluid {
