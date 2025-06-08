@@ -120,19 +120,20 @@ body.pagelayout-login #loginbtn:hover {
    MOBILE LOGIN PAGE STYLING
 =================================================== */
 @media (max-width: 767.98px) {
-  /* Vertically center the login page content */
+  /* Full-screen center the login page content */
   #page-wrapper #page {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
+    padding: 5vh 0; /* top and bottom space */
   }
 
   /* Login container (white box) */
   body.pagelayout-login .login-container {
     width: 100%;
-    max-width: 380px;
-    margin: 4vh auto;
+    max-width: 360px;
     padding: 24px 16px;
     border-radius: 6px;
     background-color: #fff;
@@ -140,7 +141,7 @@ body.pagelayout-login #loginbtn:hover {
     animation: fadeInUpMobile 0.6s ease-out both;
   }
 
-  /* Inner container alignment */
+  /* Inner alignment */
   body.pagelayout-login .login-container > div {
     display: flex;
     flex-direction: column;
@@ -148,7 +149,7 @@ body.pagelayout-login #loginbtn:hover {
     align-items: center;
   }
 
-  /* Wrapper fade effect */
+  /* Transparent background effect */
   body.pagelayout-login .login-wrapper.login-wrapper-right {
     opacity: 0.9;
   }
