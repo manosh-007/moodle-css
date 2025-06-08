@@ -113,3 +113,31 @@ body.pagelayout-login #loginbtn:hover {
     transform: translateY(0);
   }
 }
+
+
+/* ===================================================
+   MOBILE LOGIN PAGE OVERRIDES
+=================================================== */
+@media (max-width: 767px) {
+  body.pagelayout-login .login-container {
+    height: auto;
+    margin: 4vh auto;
+    max-width: 90vw;
+    padding: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  body.pagelayout-login img.img-fluid {
+    width: 180px;
+    margin-bottom: 16px;
+  }
+
+  body.pagelayout-login #loginbtn {
+    font-size: 15px;
+    padding: 0.65rem;
+  }
+
+  body.pagelayout-login .form-control.form-control-lg {
+    font-size: 15px;
+  }
+}
