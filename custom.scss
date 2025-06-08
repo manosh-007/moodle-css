@@ -116,79 +116,17 @@ body.pagelayout-login #loginbtn:hover {
 
 
 
-/* ===================================================
-   MOBILE LOGIN PAGE STYLING
-=================================================== */
-@media (max-width: 767.98px) {
-  /* Center page content without forcing full height */
-  #page-wrapper #page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10vh 16px; /* vertical spacing around the box */
-  }
+body.pagelayout-login .login-container {
+  width: 100%;
+  max-width: 360px;
+  padding: 24px 16px;
+  margin: 0 auto;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  animation: fadeInUpMobile 0.6s ease-out both;
 
-  /* Login container (white box) */
-  body.pagelayout-login .login-container {
-    width: 100%;
-    max-width: 360px;
-    padding: 24px 16px;
-    border-radius: 6px;
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    animation: fadeInUpMobile 0.6s ease-out both;
-  }
-
-  /* Center inner content */
-  body.pagelayout-login .login-container > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Slight transparent effect behind the container */
-  body.pagelayout-login .login-wrapper.login-wrapper-right {
-    opacity: 0.9;
-  }
-
-  /* Logo styling */
-  body.pagelayout-login img.img-fluid {
-    width: 180px;
-    margin-bottom: 16px;
-  }
-
-  /* Input fields */
-  body.pagelayout-login .form-control.form-control-lg {
-    font-size: 15px;
-    border-radius: 6px;
-  }
-
-  /* Login button */
-  body.pagelayout-login #loginbtn {
-    width: 100%;
-    font-size: 15px;
-    padding: 0.65rem;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-  }
-
-  body.pagelayout-login #loginbtn:hover {
-    background-color: #e00a51;
-    cursor: pointer;
-  }
-}
-
-/* ===================================================
-   ANIMATION
-=================================================== */
-@keyframes fadeInUpMobile {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* Fix stretching issue */
+  height: auto !important;
+  flex: 0 0 auto !important;
 }
