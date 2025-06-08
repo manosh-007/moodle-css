@@ -1,31 +1,14 @@
-/* ==============================================
-   LOGIN PAGE
-   ==============================================*/
+/* ===================================================
+   LOGIN PAGE BASE LAYOUT
+=================================================== */
 
-/* Remove extra padding from main wrapper on login page */
+/* Remove default padding from main wrapper */
 body.pagelayout-login div.container-fluid.pt-5.mt-0 {
   padding: 0 !important;
-   overflow: hidden;
+  overflow: hidden;
 }
 
-/* LOGIN FORM WHITE BACKGROUND STYLING */
-.login-container {
-        width: 320px !important;
-        height: 100vh;
-        border-radius: 0px;
-        overflow: hidden;
-   padding :20px;
-    }
-
-/* LOGIN FORM CENTERING */
-div.login-container > div {
-  display: flex;
-  justify-content: center;   // centers horizontally
-  align-items: center;       // centers vertically
-}
-
-
-
+/* Wrapper structure */
 body.pagelayout-login #page-wrapper {
   height: 100%;
   display: flex;
@@ -33,18 +16,46 @@ body.pagelayout-login #page-wrapper {
   overflow: hidden;
 }
 
+/* ===================================================
+   LOGIN CONTAINER (WHITE BOX)
+=================================================== */
 
-/*  LOGIN FORM LOGO */
-img.img-fluid {
-   width: 200px;
-   margin-bottom: 20px;
+body.pagelayout-login .login-container {
+  width: 320px !important;
+  height: 100vh;
+  padding: 20px;
+  border-radius: 0;
+  overflow: hidden;
+  animation: slideInRight 0.6s ease-out forwards;
 }
 
-/* ==============================================
-   LOGIN PAGE ANIMATIONS
-   ==============================================*/
+/* Center content inside white box */
+body.pagelayout-login .login-container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-/* Slide in the white block */
+/* ===================================================
+   LOGIN FORM STYLING
+=================================================== */
+
+body.pagelayout-login .loginform {
+  animation: fadeInUp 0.6s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+/* Logo above the login form */
+body.pagelayout-login img.img-fluid {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+/* ===================================================
+   ANIMATIONS
+=================================================== */
+
+/* Slide in from the right */
 @keyframes slideInRight {
   0% {
     opacity: 0;
@@ -56,7 +67,7 @@ img.img-fluid {
   }
 }
 
-/* Fade and lift the login form */
+/* Fade in and rise */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -67,16 +78,3 @@ img.img-fluid {
     transform: translateY(0);
   }
 }
-
-/* Animate the white container */
-body.pagelayout-login .login-container {
-  animation: slideInRight 0.6s ease-out forwards;
-}
-
-/* Delay the form animation until the white box is in */
-body.pagelayout-login .loginform {
-  animation: fadeInUp 0.6s ease-out 0.5s forwards;
-  opacity: 0; /* ensures it's invisible before animation starts */
-}
-
-
