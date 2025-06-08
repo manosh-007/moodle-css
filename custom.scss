@@ -68,7 +68,11 @@ div.toggle-sensitive-wrapper.small-screens-only.input-group > input.form-control
   border-radius: 6px;
 }
 
-
+/* Login button styling */
+body.pagelayout-login #loginbtn {
+  width: 100%;
+  border-radius: 6px;
+}
 
 /* ===================================================
    ANIMATIONS
