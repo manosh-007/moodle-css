@@ -120,38 +120,50 @@ body.pagelayout-login #loginbtn:hover {
    MOBILE LOGIN PAGE OVERRIDES
 =================================================== */
 @media (max-width: 767px) {
-  body.pagelayout-login .login-container {
-    height: auto;
-    margin: 6vh auto;
-    max-width: 90vw;
-    padding: 32px 16px;
-    border-radius: 6px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  body.pagelayout-login .login-container > div {
+  /* Full-page flex wrapper for vertical centering */
+  body.pagelayout-login #page-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    min-height: 100vh;
+    padding: 4vh 0;
+    overflow: hidden;
   }
 
+  /* White login container */
+  body.pagelayout-login .login-container {
+    width: 90vw;
+    max-width: 380px;
+    padding: 32px 16px;
+    border-radius: 6px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+  }
+
+  /* Inner content centering */
+  body.pagelayout-login .login-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Logo */
   body.pagelayout-login img.img-fluid {
     width: 180px;
     margin-bottom: 16px;
   }
 
+  /* Input fields */
+  body.pagelayout-login .form-control.form-control-lg {
+    font-size: 15px;
+    border-radius: 6px;
+  }
+
+  /* Login button */
   body.pagelayout-login #loginbtn {
     font-size: 15px;
     padding: 0.65rem;
     border-radius: 6px;
-  }
-
-  body.pagelayout-login .form-control.form-control-lg {
-    font-size: 15px;
-    border-radius: 6px;
+    width: 100%;
   }
 }
