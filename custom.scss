@@ -40,8 +40,23 @@ img.img-fluid {
    margin-bottom: 20px;
 }
 
-/*  LOGIN FORM ANIMATION  */
+/* ==============================================
+   LOGIN PAGE ANIMATIONS
+   ==============================================*/
 
+/* Slide in the white block */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade and lift the login form */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -53,8 +68,15 @@ img.img-fluid {
   }
 }
 
+/* Animate the white container */
+body.pagelayout-login .login-container {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* Delay the form animation until the white box is in */
 body.pagelayout-login .loginform {
-  animation: fadeInUp 0.8s ease-out both;
+  animation: fadeInUp 0.6s ease-out 0.5s forwards;
+  opacity: 0; /* ensures it's invisible before animation starts */
 }
 
 
