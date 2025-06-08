@@ -72,7 +72,19 @@ div.toggle-sensitive-wrapper.small-screens-only.input-group > input.form-control
 body.pagelayout-login #loginbtn {
   width: 100%;
   border-radius: 6px;
+  background-color: #e60023;
+  color: #fff;
+  padding: 0.75rem;
+  font-weight: 600;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+body.pagelayout-login #loginbtn:hover {
+  background-color: #e00a51;
+  cursor: pointer;
+}
+
 
 /* ===================================================
    ANIMATIONS
