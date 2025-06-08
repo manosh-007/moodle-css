@@ -124,7 +124,7 @@ body.pagelayout-login #loginbtn:hover {
   #page-wrapper #page {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     min-height: 100vh;
   }
 
@@ -132,7 +132,7 @@ body.pagelayout-login #loginbtn:hover {
   body.pagelayout-login .login-container {
     height: auto;
     margin: 0 auto;
-    max-width: 90vw;
+    max-width: 95vw;
     padding: 32px 16px;
     border-radius: 6px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
