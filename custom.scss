@@ -1,1 +1,10 @@
+/* ==============================================
+   LOGIN PAGE
+   ==============================================*/
+
+/* Remove extra padding from main wrapper on login page */
+body.pagelayout-login div.container-fluid.pt-5.mt-0 {
+  padding: 0 !important;
+}
+
 
