@@ -16,6 +16,13 @@ body.pagelayout-login div.container-fluid.pt-5.mt-0 {
         overflow: hidden;
     }
 
+/* LOGIN FORM CENTERING */
+div.login-container > div {
+  display: flex;
+  justify-content: center;   // centers horizontally
+  align-items: center;       // centers vertically
+}
+
 
 
 body.pagelayout-login #page-wrapper {
