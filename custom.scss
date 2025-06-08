@@ -128,21 +128,30 @@ body.pagelayout-login #loginbtn:hover {
     min-height: 100vh;
   }
 
-  /* Login container (white block) */
+  /* Login container (white box) */
   body.pagelayout-login .login-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 30px;
-    padding: 16px;
+    width: 100%;
+    max-width: 380px;
+    margin: 4vh auto;
+    padding: 24px 16px;
     border-radius: 6px;
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     animation: fadeInUpMobile 0.6s ease-out both;
   }
 
+  /* Inner container alignment */
+  body.pagelayout-login .login-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
+  /* Wrapper fade effect */
+  body.pagelayout-login .login-wrapper.login-wrapper-right {
+    opacity: 0.9;
+  }
 
   /* Logo styling */
   body.pagelayout-login img.img-fluid {
