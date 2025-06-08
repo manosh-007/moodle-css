@@ -51,6 +51,12 @@ body.pagelayout-login img.img-fluid {
   margin-bottom: 20px;
 }
 
+/* LOG IN FIELDS */
+div.login-form-username.mb-3 > input.form-control.form-control-lg,
+div.toggle-sensitive-wrapper.small-screens-only.input-group > input.form-control.form-control-lg {
+  border-radius: 6px;
+}
+
 /* ===================================================
    ANIMATIONS
 =================================================== */
