@@ -117,10 +117,10 @@ body.pagelayout-login #loginbtn:hover {
 
 
 /* ===================================================
-   MOBILE LOGIN PAGE STYLING
+   MOBILE LOGIN PAGE OVERRIDES
 =================================================== */
 @media (max-width: 767.98px) {
-  /* Vertically center the login page content */
+  /* Center the login container vertically */
   #page-wrapper #page {
     display: flex;
     flex-direction: column;
@@ -128,26 +128,27 @@ body.pagelayout-login #loginbtn:hover {
     min-height: 100vh;
   }
 
-  /* Login container (white block) */
+  /* White login box styling with animation */
   body.pagelayout-login .login-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 30px;
-    padding: 16px;
+    height: auto;
+    margin: 0 auto;
+    max-width: 90vw;
+    padding: 32px 16px;
     border-radius: 6px;
-    background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
     animation: fadeInUpMobile 0.6s ease-out both;
   }
 
-  /* Wrapper fade effect */
-  body.pagelayout-login .login-wrapper.login-wrapper-right {
-    opacity: 0.9;
+  /* Center form inside the box */
+  body.pagelayout-login .login-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
-  /* Logo styling */
+  /* Logo size */
   body.pagelayout-login img.img-fluid {
     width: 180px;
     margin-bottom: 16px;
@@ -161,10 +162,10 @@ body.pagelayout-login #loginbtn:hover {
 
   /* Login button */
   body.pagelayout-login #loginbtn {
-    width: 100%;
     font-size: 15px;
     padding: 0.65rem;
     border-radius: 6px;
+    width: 100%;
     transition: background-color 0.3s ease;
   }
 
@@ -175,7 +176,7 @@ body.pagelayout-login #loginbtn:hover {
 }
 
 /* ===================================================
-   ANIMATION
+   MOBILE FADE-IN ANIMATION
 =================================================== */
 @keyframes fadeInUpMobile {
   0% {
