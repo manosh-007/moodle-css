@@ -287,3 +287,29 @@ width: 320px;
   box-shadow: none;
   border: none;
 }
+
+
+/*---FONTS----*/
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;600;700&display=swap');
+
+/* Base Body Font */
+body {
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* Headings and Menus */
+h1, h2, h3, h4, h5, h6,
+.navbar, .navbar-brand, .nav-link,
+.moremenu .nav-link,
+.dropdown-menu a,
+#nav-drawer,
+.block,
+.block-title,
+.card-title,
+.sectionname,
+.page-header,
+#page-footer {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600;
+}
