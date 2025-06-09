@@ -215,6 +215,23 @@ padding-top: 15px;
    padding-bottom: 15px;
 }
 
+/*----------MAIN BUTTON STYLING-----------*/
+.btn-primary {
+  background-color: #e60023;       // Your brand red
+  border: none;
+  border-radius: 6px;
+  color: #fff !important;
+  padding: 0.75rem 1.25rem;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e00a51 !important;
+  transform: scale(1.02);
+  cursor: pointer;
+}
 
 
 
