@@ -254,5 +254,31 @@ padding-top: 15px;
 
 
 .course-card.mx-1.mb-2 {
-width: 150px;
+width: 320px;
+}
+
+/* ===================================================
+   
+   MAIN MENU STYLING
+
+=================================================== */
+.moremenu .nav-link {
+  color: #00192D;
+  font-weight: 600;
+  border: none;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover: dark underline */
+.moremenu .nav-link:hover {
+  border-bottom: 3px solid #333;
+  color: #00192D; /* Keeps it consistent */
+}
+
+/* Active Tab: red underline */
+.moremenu .nav-link.active,
+.moremenu .nav-link.active_tree_node {
+  border-bottom: 3px solid #e60023;
+  color: #00192D;
 }
