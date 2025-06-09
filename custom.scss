@@ -231,6 +231,18 @@ padding-top: 15px;
 }
 
 .btn-secondary {
+  background-color: #CED4DA;
+  color: #00192D;
+  border: none;
   border-radius: 6px;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
+.btn-secondary:hover {
+  background-color: #00192D;
+  color: #fff !important;
+  cursor: pointer;
+}
