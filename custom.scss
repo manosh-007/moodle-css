@@ -263,8 +263,8 @@ width: 320px;
 
 =================================================== */
 .moremenu .nav-link {
-  color: #00192D;
-  font-weight: 600;
+  color: #565f66;
+  font-weight: 400;
   border: none;
   border-bottom: 3px solid transparent;
   transition: border-color 0.3s ease, color 0.3s ease;
@@ -279,6 +279,7 @@ width: 320px;
 .moremenu .nav-link.active_tree_node {
   border-bottom: 3px solid #e60023;
   color: #00192D;
+   font-weight: 600;
 }
 
 .moremenu .nav-link:focus {
