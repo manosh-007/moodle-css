@@ -215,7 +215,7 @@ padding-top: 15px;
    padding-bottom: 15px;
 }
 
-/*----------MAIN BUTTON STYLING-----------*/
+/*----------SITE BUTTONS STYLING-----------*/
 .btn-primary {
   background-color: #00192D;       // Your brand red
   border: none;
@@ -230,5 +230,7 @@ padding-top: 15px;
   cursor: pointer;
 }
 
-
+.btn-secondary {
+  border-radius: 6px;
+}
 
