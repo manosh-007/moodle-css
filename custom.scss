@@ -270,15 +270,19 @@ width: 320px;
   transition: border-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover: dark underline */
 .moremenu .nav-link:hover {
   border-bottom: 3px solid #333;
-  color: #00192D; /* Keeps it consistent */
+  color: #00192D;
 }
 
-/* Active Tab: red underline */
 .moremenu .nav-link.active,
 .moremenu .nav-link.active_tree_node {
   border-bottom: 3px solid #e60023;
   color: #00192D;
+}
+
+.moremenu .nav-link:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
 }
