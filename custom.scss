@@ -309,13 +309,16 @@ a.aalink.coursename.me-2.mb-1 {
 =================================================== */
 
 
-
 .pc-profile-widget {
   background: white;
   border-radius: 16px;
-  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  padding: 2rem 2rem 0 2rem;
   text-align: center;
   margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pc-avatar img {
@@ -344,17 +347,35 @@ a.aalink.coursename.me-2.mb-1 {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  font-size: 0.9rem;
-  margin-top: 1rem;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #000;
+  border-radius: 0 0 16px 16px;
+  color: white;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .pc-stats div {
   display: flex;
   flex-direction: column;
+  flex: 1 1 120px;
 }
 
-.pc-stats strong {
-  font-size: 1.2rem;
+.pc-stats strong a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
+.pc-stats strong a:hover {
+  color: #d32f2f;
+  text-decoration: underline;
+}
 
+.pc-stats span {
+  font-size: 0.75rem;
+  color: #ddd;
+}
