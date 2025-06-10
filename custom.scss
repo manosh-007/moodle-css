@@ -300,3 +300,62 @@ a.aalink.coursename.me-2.mb-1 {
   border: none;
 }
 
+
+
+/* ===================================================
+   
+   DASHBOARD CUSTOM LOOK 
+
+=================================================== */
+
+
+
+.pc-profile-widget {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.pc-avatar img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.pc-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.pc-edit {
+  display: block;
+  font-size: 0.9rem;
+  color: #d32f2f;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.pc-stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.pc-stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.pc-stats strong {
+  font-size: 1.2rem;
+}
+
+
