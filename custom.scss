@@ -256,10 +256,11 @@ padding-top: 15px;
 .course-card.mx-1.mb-2 {
 width: 320px;
 }
-
-.course-card .card-img-top, .theme-card .card-img-top{
-   height: 180px;
-
+.course-card .card-img-top, .theme-card .card-img-top {
+    height: 9.5rem;
+    background-position: center;
+    background-size: cover;
+}
 /* ===================================================
    
    MAIN MENU STYLING
