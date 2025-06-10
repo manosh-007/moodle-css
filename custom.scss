@@ -303,26 +303,20 @@ a.aalink.coursename.me-2.mb-1 {
 
 
 /* ===================================================
-   
-   DASHBOARD CUSTOM LOOK 
-
+   DASHBOARD CUSTOM LOOK – Pixel Craft
 =================================================== */
-
 
 .pc-profile-widget {
   background: white;
   border-radius: 16px;
-text-align: center;
- max-width: 100%;
-  
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
 }
-
 
 .block_html .card-body:has(.pc-profile-widget) {
   padding: 0 !important;
 }
-
-
 
 .pc-avatar img {
   width: 96px;
@@ -345,6 +339,10 @@ text-align: center;
   margin-bottom: 1rem;
   text-decoration: none;
 }
+
+/* ============================
+   STATS SECTION (BOTTOM BAR)
+============================ */
 
 .pc-stats {
   display: flex;
@@ -381,4 +379,54 @@ text-align: center;
 .pc-stats span {
   font-size: 0.75rem;
   color: #ced4da;
+}
+
+/* ============================
+   RESPONSIVE STYLING
+============================ */
+
+/* Tablet (below 992px) */
+@media (max-width: 991px) {
+  .pc-stats {
+    gap: 0.75rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+  }
+
+  .pc-stats div {
+    flex: 1 1 45%;
+  }
+
+  .pc-name {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile (below 600px) */
+@media (max-width: 600px) {
+  .pc-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .pc-stats div {
+    flex: 1 1 auto;
+  }
+
+  .pc-avatar img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .pc-name {
+    font-size: 1.1rem;
+  }
+
+  .pc-stats strong a {
+    font-size: 0.95rem;
+  }
+
+  .pc-stats span {
+    font-size: 0.7rem;
+  }
 }
