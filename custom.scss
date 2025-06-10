@@ -303,20 +303,26 @@ a.aalink.coursename.me-2.mb-1 {
 
 
 /* ===================================================
-   DASHBOARD CUSTOM LOOK – Pixel Craft
+   
+   DASHBOARD CUSTOM LOOK 
+
 =================================================== */
+
 
 .pc-profile-widget {
   background: white;
   border-radius: 16px;
-  text-align: center;
-  max-width: 100%;
-  overflow: hidden;
+text-align: center;
+ max-width: 100%;
+  
 }
+
 
 .block_html .card-body:has(.pc-profile-widget) {
   padding: 0 !important;
 }
+
+
 
 .pc-avatar img {
   width: 96px;
@@ -340,10 +346,6 @@ a.aalink.coursename.me-2.mb-1 {
   text-decoration: none;
 }
 
-/* ============================
-   STATS SECTION (BOTTOM BAR)
-============================ */
-
 .pc-stats {
   display: flex;
   justify-content: space-around;
@@ -361,4 +363,22 @@ a.aalink.coursename.me-2.mb-1 {
 .pc-stats div {
   display: flex;
   flex-direction: column;
+  flex: 1 1 120px;
+}
+
+.pc-stats strong a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.pc-stats strong a:hover {
+  color: #d32f2f;
+  text-decoration: underline;
+}
+
+.pc-stats span {
+  font-size: 0.75rem;
+  color: #ced4da;
 }
