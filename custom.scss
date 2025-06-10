@@ -321,6 +321,18 @@ a.aalink.coursename.me-2.mb-1 {
   margin-right: auto;
 }
 
+.block.block_text {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.block.block_text .content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
 
 .pc-avatar img {
