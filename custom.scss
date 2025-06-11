@@ -310,7 +310,6 @@ a.aalink.coursename.me-2.mb-1 {
 =================================================== */
 
 
-
 .pc-profile-widget {
   background: white;
   border-radius: 16px;
@@ -345,7 +344,7 @@ a.aalink.coursename.me-2.mb-1 {
   text-decoration: none;
 }
 
-/* Stat block container */
+/* Stats area */
 .pc-stats {
   display: flex;
   flex-wrap: wrap;
@@ -356,50 +355,51 @@ a.aalink.coursename.me-2.mb-1 {
   gap: 1rem;
 }
 
-/* Tile-style link */
+/* Individual tiles */
 .pc-stat-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   flex: 1 1 120px;
-  background: transparent;
-  border-radius: 8px;
-  padding: 1rem;
-  text-decoration: none;
-  color: white;
-  transition: background 0.3s ease;
   text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: transparent;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  color: white !important;
 }
 
 .pc-stat-tile:hover {
-  background: #d32f2f;
+  background-color: #d32f2f;
 }
 
-.pc-stat-tile strong {
-  font-size: 1rem;
+.pc-label {
   font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
 }
 
-.pc-stat-tile span {
+.pc-desc {
   font-size: 0.75rem;
   color: #ced4da;
 }
 
-/* Responsive adjustments */
+/* Tablet */
 @media (max-width: 991px) {
   .pc-stat-tile {
     flex: 1 1 45%;
   }
+
   .pc-name {
     font-size: 1.3rem;
   }
 }
 
+/* Mobile */
 @media (max-width: 600px) {
   .pc-stats {
     flex-direction: column;
-    gap: 0.5rem;
   }
 
   .pc-avatar img {
@@ -411,11 +411,11 @@ a.aalink.coursename.me-2.mb-1 {
     font-size: 1.1rem;
   }
 
-  .pc-stat-tile strong {
+  .pc-label {
     font-size: 0.95rem;
   }
 
-  .pc-stat-tile span {
+  .pc-desc {
     font-size: 0.7rem;
   }
 }
