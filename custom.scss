@@ -497,12 +497,13 @@ a.aalink.coursename.me-2.mb-1 {
 =============================== */
 
 /* ===== Pixel Craft Help Form Styling ===== */
+
 .pc-help-form-block {
   background: white;
   padding: 2.5rem;
   margin: 4rem auto;
   border-radius: 16px;
-  max-width: 600px;
+   max-width: 600px;
   font-family: 'Inter', sans-serif;
 }
 
@@ -565,7 +566,7 @@ a.aalink.coursename.me-2.mb-1 {
   background: #b02a27;
 }
 
-/* Hidden state */
+/* Hidden field control */
 .pc-form-group.hidden {
   display: none;
 }
@@ -586,3 +587,4 @@ a.aalink.coursename.me-2.mb-1 {
     padding: 0.75rem 1.25rem;
   }
 }
+
