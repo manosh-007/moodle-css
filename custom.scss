@@ -302,11 +302,13 @@ a.aalink.coursename.me-2.mb-1 {
 
 
 
-/* ===================================================
-   DASHBOARD CUSTOM LOOK – Pixel Craft
-=================================================== */
 
-.pc-profile-widget {
+
+
+
+
+
+ .pc-profile-widget {
   background: white;
   border-radius: 16px;
   text-align: center;
@@ -340,84 +342,61 @@ a.aalink.coursename.me-2.mb-1 {
   text-decoration: none;
 }
 
-/* ============================
-   STATS SECTION (BOTTOM BAR)
-============================ */
-
+/* Stat block container */
 .pc-stats {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  text-align: center;
-  font-size: 0.85rem;
-  margin-top: 2rem;
-  padding: 1rem;
   background: #00192D;
   border-radius: 0 0 8px 8px;
-  color: white;
-  flex-wrap: wrap;
+  padding: 1rem;
   gap: 1rem;
 }
 
-.pc-stat-link {
-  text-decoration: none;
-  color: inherit;
-  flex: 1 1 120px;
+/* Tile-style link */
+.pc-stat-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex: 1 1 120px;
   background: transparent;
   border-radius: 8px;
   padding: 1rem;
-  transition: background 0.3s ease;
-}
-
-.pc-stat-link:hover {
-  background-color: #d32f2f;
-}
-
-.pc-stat-link strong {
-  font-size: 1rem;
-  font-weight: 500;
+  text-decoration: none;
   color: white;
+  transition: background 0.3s ease;
+  text-align: center;
 }
 
-.pc-stat-link span {
+.pc-stat-tile:hover {
+  background: #d32f2f;
+}
+
+.pc-stat-tile strong {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.pc-stat-tile span {
   font-size: 0.75rem;
   color: #ced4da;
 }
 
-/* ============================
-   RESPONSIVE STYLING
-============================ */
-
-/* Tablet (below 992px) */
+/* Responsive adjustments */
 @media (max-width: 991px) {
-  .pc-stats {
-    gap: 0.75rem;
-    padding: 1rem 1rem 1.5rem 1rem;
-  }
-
-  .pc-stat-link {
+  .pc-stat-tile {
     flex: 1 1 45%;
   }
-
   .pc-name {
     font-size: 1.3rem;
   }
 }
 
-/* Mobile (below 600px) */
 @media (max-width: 600px) {
   .pc-stats {
     flex-direction: column;
     gap: 0.5rem;
-    padding: 1rem;
-  }
-
-  .pc-stat-link {
-    flex: 1 1 auto;
-    padding: 1rem 0.75rem;
   }
 
   .pc-avatar img {
@@ -429,11 +408,11 @@ a.aalink.coursename.me-2.mb-1 {
     font-size: 1.1rem;
   }
 
-  .pc-stat-link strong {
+  .pc-stat-tile strong {
     font-size: 0.95rem;
   }
 
-  .pc-stat-link span {
+  .pc-stat-tile span {
     font-size: 0.7rem;
   }
 }
