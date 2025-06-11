@@ -496,67 +496,11 @@ a.aalink.coursename.me-2.mb-1 {
    SUPPORT FORM
 =============================== */
 
-.pc-help-form-block {
-  background: white;
-  padding: 2.5rem;
-  margin: 4rem auto;
-  border-radius: 16px;
-  max-width: 600px;
-  font-family: 'Inter', sans-serif;
-}
-
-.pc-help-title {
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  font-weight: 600;
-  color: #00192D;
+.pc-form-group.hidden {
+  display: none;
 }
 
 .pc-form-group {
   margin-bottom: 1.5rem;
-}
-
-.pc-form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  color: #333;
-}
-
-.pc-form-group input,
-.pc-form-group select,
-.pc-form-group textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fafafa;
-  transition: border-color 0.2s ease;
-}
-
-.pc-form-group input:focus,
-.pc-form-group select:focus,
-.pc-form-group textarea:focus {
-  border-color: #d32f2f;
-  outline: none;
-  background: #fff;
-}
-
-.pc-button {
-  background: #d32f2f;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  padding: 0.75rem 2rem;
-  cursor: pointer;
-  font-weight: 600;
-  display: inline-block;
-  transition: background 0.3s ease;
-}
-
-.pc-button:hover {
-  background: #b02a27;
+  transition: all 0.3s ease;
 }
