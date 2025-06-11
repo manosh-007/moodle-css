@@ -496,8 +496,6 @@ a.aalink.coursename.me-2.mb-1 {
    SUPPORT FORM
 =============================== */
 
-
-
 .pc-help-form-block {
   background: white;
   padding: 2.5rem;
@@ -549,32 +547,17 @@ a.aalink.coursename.me-2.mb-1 {
 
 .pc-button {
   background: #d32f2f;
-  color: #fff;
+  color: white;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   padding: 0.75rem 2rem;
   cursor: pointer;
   font-weight: 600;
-  display: block;
-  width: 100%;
-  margin-top: 1rem;
+  display: inline-block;
   transition: background 0.3s ease;
 }
 
 .pc-button:hover {
   background: #b02a27;
 }
-
-/* Responsive */
-@media (max-width: 600px) {
-  .pc-help-form-block {
-    padding: 1.5rem;
-    margin: 2rem 1rem;
-  }
-
-  .pc-button {
-    font-size: 0.95rem;
-  }
-}
-
