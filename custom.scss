@@ -322,12 +322,8 @@ a.aalink.coursename.me-2.mb-1 {
   padding: 0 !important;
 }
 
-.pc-avatar img {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  object-fit: cover;
+img.pc-avatar {
+  border-style: solid;
 }
 
 .pc-name {
