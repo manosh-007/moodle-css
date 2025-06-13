@@ -310,69 +310,87 @@ a.aalink.coursename.me-2.mb-1 {
 =================================================== */
 
 
+/* ===================================================
+   DASHBOARD CUSTOM SECTION (Updated)
+=================================================== */
+
 .pc-profile-widget {
   background: white;
   border-radius: 8px;
   text-align: center;
   max-width: 100%;
   overflow: hidden;
+  font-family: 'Inter', sans-serif;
 }
 
 .block_html .card-body:has(.pc-profile-widget) {
   padding: 0 !important;
 }
 
+/* Avatar image */
 img.pc-avatar {
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 50px;
-   border-color: #DEE2E6;
+  border: 2px solid #DEE2E6;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
+/* Name & email */
 .pc-name {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.3rem;
 }
 
-.pc-edit {
-  display: block;
+.pc-email {
   font-size: 0.9rem;
-  color: #d32f2f;
+  color: #666;
   margin-bottom: 1rem;
-  text-decoration: none;
 }
 
-/* Stats area */
+/* Edit Profile link */
+.pc-edit {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #d32f2f;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Stats section container */
 .pc-stats {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   background: #00192D;
-  border-radius: 0 0 8px 8px;
   padding: 1rem;
   gap: 1rem;
 }
 
-/* Individual tiles */
+/* Stat tile */
 .pc-stat-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1 1 120px;
+  min-width: 120px;
   text-align: center;
   padding: 1rem;
   border-radius: 6px;
   background-color: transparent;
+  color: white !important;
   text-decoration: none;
   transition: background 0.3s ease;
-  color: white !important;
 }
 
 .pc-stat-tile:hover {
-  background-color: #e00a51;
+  background-color: #d32f2f;
 }
 
+/* Label + description inside tile */
 .pc-label {
   font-weight: 600;
   font-size: 1rem;
@@ -384,7 +402,7 @@ img.pc-avatar {
   color: #ced4da;
 }
 
-/* Tablet */
+/* Tablet adjustments */
 @media (max-width: 991px) {
   .pc-stat-tile {
     flex: 1 1 45%;
@@ -395,13 +413,14 @@ img.pc-avatar {
   }
 }
 
-/* Mobile */
+/* Mobile adjustments */
 @media (max-width: 600px) {
   .pc-stats {
     flex-direction: column;
+    padding: 1rem;
   }
 
-  .pc-avatar img {
+  img.pc-avatar {
     width: 72px;
     height: 72px;
   }
@@ -418,6 +437,7 @@ img.pc-avatar {
     font-size: 0.7rem;
   }
 }
+
 
 
 
