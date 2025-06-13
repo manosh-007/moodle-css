@@ -366,29 +366,50 @@ img.pc-avatar {
   flex-wrap: wrap;
   justify-content: space-around;
   background: #00192D;
+  border-radius: 0 0 8px 8px;
   padding: 1rem;
   gap: 1rem;
 }
 
-/* Stat tile */
 .pc-stat-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1 1 120px;
   min-width: 120px;
+  max-width: 220px;
   text-align: center;
   padding: 1rem;
-  border-radius: 6px;
-  background-color: transparent;
-  color: white !important;
+  border-radius: 10px;
+  background-color: white;
+  color: #00192D;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 .pc-stat-tile:hover {
   background-color: #d32f2f;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
+
+.pc-stat-tile:hover .pc-desc {
+  color: #ffeef0;
+}
+
+.pc-label {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.pc-desc {
+  font-size: 0.75rem;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
 
 /* Label + description inside tile */
 .pc-label {
