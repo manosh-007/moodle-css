@@ -305,8 +305,29 @@ a.aalink.coursename.me-2.mb-1 {
 
 
 /* ===================================================
-   DASHBOARD CUSTOM SECTION (Updated)
+   DASHBOARD SUPPORT FORM SECTION )
 =================================================== */
+
+.pc-button {
+  background-color: #00192D; /* Dark Pixel Craft colour */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.pc-button:hover {
+  background-color: #d32f2f; /* Pixel Red on hover */
+}
+
+
 
 /* ===================================================
    DASHBOARD CUSTOM SECTION (Fixed)
