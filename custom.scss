@@ -1,3 +1,61 @@
+/*--------FONTS-----------*/
+/* --- FONT-FACE DECLARATIONS --- */
+@font-face {
+  font-family: 'Poppins';
+  src: url("https://learn.pixelcrafttraining.co.za/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-Regular.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("https://learn.pixelcrafttraining.co.za/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-Medium.woff2") format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("https://learn.pixelcrafttraining.co.za/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-Black.woff2") format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url("https://learn.pixelcrafttraining.co.za/pluginfile.php/1/theme_boost_union/customfonts/0/Inter-Regular.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* --- SITE-WIDE FONT USAGE --- */
+
+/* Body uses Inter for readability */
+body, html, .content, .usertext, .form-control, .card-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+/* Headings use Poppins in different weights */
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+
+h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+/* Optional UI Elements — Buttons, Menus, etc. */
+.navbar, .dropdown-menu, .btn, .card-title, .breadcrumb {
+  font-family: 'Poppins', sans-serif;
+}
 
 
 /* ===================================================
