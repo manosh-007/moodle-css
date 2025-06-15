@@ -1,12 +1,6 @@
 /*-------- FONTS --------*/
 
 
-h1.h2.mb-0 {
-    font-size: 60px !important;
-    font-weight: 400 !important;
-    font-style: normal !important;
-}
-
 /* --- FONT-FACE DECLARATIONS --- */
 @font-face {
   font-family: 'Poppins';
@@ -89,6 +83,13 @@ body.pagelayout-login #page-wrapper {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+/*===========custom font ======*/
+h1.h2.mb-0 {
+    font-size: 60px !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
 }
 
 /* ===================================================
