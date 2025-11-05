@@ -788,7 +788,10 @@ img.pc-avatar {
 
 
 
-/* 🎨 Pixel Craft Green for Folder Icons */
+/* 🎨 Pixel Craft Green – only for Folder icons */
 li.activity.folder.modtype_folder.hasinfo img.activityicon {
-  filter: invert(82%) sepia(78%) saturate(6604%) hue-rotate(120deg) brightness(101%) contrast(99%);
+  filter: none !important;                /* cancel Boost Union's injected filter */
+  fill: #0BE4CA !important;               /* sets colour if the SVG supports fill */
+  color: #0BE4CA !important;              /* fallback for some themes */
+  -webkit-filter: none !important;        /* extra safety for WebKit browsers */
 }
