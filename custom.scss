@@ -783,3 +783,12 @@ img.pc-avatar {
 
 
 
+
+
+
+
+
+/* 🎨 Pixel Craft Green for Folder Icons */
+li.activity.folder.modtype_folder.hasinfo img.activityicon {
+  filter: invert(82%) sepia(78%) saturate(6604%) hue-rotate(120deg) brightness(101%) contrast(99%);
+}
