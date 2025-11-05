@@ -783,25 +783,3 @@ img.pc-avatar {
 
 
 
-
-
-/* ===============================
-   COURSE ICON COLOURS
-=============================== */
-
-
-/* 🎨 Pixel Craft Icon Colours */
-[data-type="folder"] .activityicon,
-.activityiconcontainer.folder {
-  color: #F20954; /* Pixel Craft Red */
-}
-
-[data-type="resource"] .activityicon,
-.activityiconcontainer.resource {
-  color: #0BE4CA; /* Pixel Craft Green */
-}
-
-[data-type="assign"] .activityiconcontainer,
-[data-type="quiz"] .activityiconcontainer {
-  color: #CCCCCC; /* Subtle silver for assessments */
-}
