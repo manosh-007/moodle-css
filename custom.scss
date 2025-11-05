@@ -788,8 +788,25 @@ img.pc-avatar {
 
 
 
-/* 🎨 Light Green Folder Icon (#CCFF99) */
+
+
+
+
+
+
+
+
+
+/* 🎨 Pixel Craft Light Green Folder Icons Everywhere (#CCFF99) */
+
+/* Course page version (already working) */
 li.activity.folder.modtype_folder.hasinfo img.activityicon {
+  filter: invert(93%) sepia(8%) saturate(2376%)
+          hue-rotate(39deg) brightness(102%) contrast(101%) !important;
+}
+
+/* Folder view page version (no list parent) */
+.path-mod-folder img.activityicon {
   filter: invert(93%) sepia(8%) saturate(2376%)
           hue-rotate(39deg) brightness(102%) contrast(101%) !important;
 }
