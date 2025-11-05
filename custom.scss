@@ -797,13 +797,19 @@ img.pc-avatar {
 
 
 
-/* 🎨 Light-green folder icon inside opened folder page (#CCFF99) */
-.path-mod-folder img.activityicon {
-  /* remove Boost Union’s embedded SVG recolour */
-  filter: none !important;
-  -webkit-filter: none !important;
+/* 🎨 Light-green folder icon (#CCFF99) */
 
-  /* now apply our own tint */
-  filter: invert(90%) sepia(18%) saturate(1921%)
-          hue-rotate(38deg) brightness(103%) contrast(101%) !important;
+/* 1️⃣ Course page (activity list) */
+li.activity.folder.modtype_folder.hasinfo img.activityicon {
+  filter: invert(93%) sepia(8%) saturate(2376%)
+          hue-rotate(39deg) brightness(102%) contrast(101%) !important;
 }
+
+/* 2️⃣ Inside the folder view page */
+.path-mod-folder img.activityicon {
+  filter: none !important; /* neutralise Boost Union’s injected purple filter */
+  -webkit-filter: none !important;
+  filter: invert(93%) sepia(8%) saturate(2376%)
+          hue-rotate(39deg) brightness(102%) contrast(101%) !important;
+}
+
