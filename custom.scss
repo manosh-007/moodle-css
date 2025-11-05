@@ -813,3 +813,17 @@ li.activity.folder.modtype_folder.hasinfo img.activityicon {
           hue-rotate(39deg) brightness(102%) contrast(101%) !important;
 }
 
+
+
+
+
+/* 🎨 Light-green big header icon – only for Folder pages (#CCFF99) */
+.path-mod-folder #page-header .page-header-image img {
+  filter: none !important;  /* remove Boost Union's purple filter */
+  -webkit-filter: none !important;
+
+  /* apply your light-green tint */
+  filter: invert(93%) sepia(8%) saturate(2376%)
+          hue-rotate(39deg) brightness(102%) contrast(101%) !important;
+}
+
