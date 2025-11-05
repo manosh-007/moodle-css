@@ -797,16 +797,13 @@ img.pc-avatar {
 
 
 
-/* 🎨 Pixel Craft Light Green Folder Icons Everywhere (#CCFF99) */
-
-/* Course page version (already working) */
-li.activity.folder.modtype_folder.hasinfo img.activityicon {
-  filter: invert(93%) sepia(8%) saturate(2376%)
-          hue-rotate(39deg) brightness(102%) contrast(101%) !important;
-}
-
-/* Folder view page version (no list parent) */
+/* 🎨 Light-green folder icon inside opened folder page (#CCFF99) */
 .path-mod-folder img.activityicon {
-  filter: invert(93%) sepia(8%) saturate(2376%)
-          hue-rotate(39deg) brightness(102%) contrast(101%) !important;
+  /* remove Boost Union’s embedded SVG recolour */
+  filter: none !important;
+  -webkit-filter: none !important;
+
+  /* now apply our own tint */
+  filter: invert(90%) sepia(18%) saturate(1921%)
+          hue-rotate(38deg) brightness(103%) contrast(101%) !important;
 }
