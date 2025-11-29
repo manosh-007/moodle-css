@@ -1,3 +1,22 @@
+/* Hide course navigation tabs on Site Home */
+body#page-site-index .nav-tabs,
+body#page-site-index .moremenu {
+    display: none !important;
+}
+
+/* Hide the "You are viewing this course with the role" message */
+body#page-site-index .rolealert {
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+
 /* ===================================================
    PIXEL CRAFT — GLOBAL FONTS & BASE RESET
 =================================================== */
