@@ -1,4 +1,9 @@
-/*-------- FONTS --------*/
+/* ===================================================
+   PIXEL CRAFT — GLOBAL FONTS & BASE RESET
+=================================================== */
+
+/* Debug background (remove when done) */
+/* body { background: #ff00ff !important; } */
 
 /* --- FONT-FACE DECLARATIONS --- */
 @font-face {
@@ -29,70 +34,34 @@
   font-style: normal;
 }
 
-/* --- FONT USAGE --- */
-
-/* Body text uses Inter for clarity */
+/* --- GLOBAL FONT USAGE --- */
 body, html, .content, .usertext, .form-control, .card-text {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
 }
 
-/* Headings use Poppins with appropriate weights */
-h1, h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-}
-
-h3, h4 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-}
-
-h5, h6 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-}
-
-/* UI elements also get Poppins */
+h1, h2, h3, h4, h5, h6,
 .navbar, .dropdown-menu, .btn, .card-title, .breadcrumb {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
 
-
-
-/*===========custom font ======*/
-#yui_3_18_1_1_1750013414887_12 {
-  font-size: 30px !important;
-  font-weight: 400  !important;
-}
-
-
-h1.h2.mb-0 {
-    font-size: 30px !important;
-    font-weight: 400 !important;
-    font-style: normal !important;
-}
-
-#page-header > div > div.d-flex.align-items-center > div.me-auto > div > div > h1{
-  font-size: 36px;
-  font-weight: 400px;
+/* Header page title (course or dashboard name) */
+#page-header h1 {
+  font-size: 36px !important;
+  font-weight: 400 !important;
 }
 
 
 /* ===================================================
-   
-           LOGIN PAGE BASE LAYOUT
-
+   LOGIN PAGE CUSTOMISATION
 =================================================== */
 
-/* Remove default padding from main wrapper */
 body.pagelayout-login div.container-fluid.pt-5.mt-0 {
   padding: 0 !important;
   overflow: hidden;
 }
 
-/* Wrapper structure */
 body.pagelayout-login #page-wrapper {
   height: 100%;
   display: flex;
@@ -100,120 +69,55 @@ body.pagelayout-login #page-wrapper {
   overflow: hidden;
 }
 
-
-/* ===================================================
-   LOGIN CONTAINER (WHITE BOX)
-=================================================== */
-
 body.pagelayout-login .login-container {
   width: 320px !important;
   height: 100vh;
   padding: 20px;
-  border-radius: 0;
   overflow: hidden;
   animation: slideInRight 0.6s ease-out forwards;
 }
 
-/* Center content inside white box */
 body.pagelayout-login .login-container > div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* ===================================================
-   LOGIN FORM STYLING
-=================================================== */
-
 body.pagelayout-login .loginform {
   animation: fadeInUp 0.6s ease-out 0.5s forwards;
   opacity: 0;
 }
 
-/* Logo above the login form */
 body.pagelayout-login img.img-fluid {
   width: 240px;
   margin-bottom: 20px;
 }
 
-/* LOG IN FIELDS */
-div.login-form-username.mb-3 > input.form-control.form-control-lg,
-div.toggle-sensitive-wrapper.small-screens-only.input-group > input.form-control.form-control-lg {
-  border-radius: 6px;
-   font-size: 16px;
-}
-
-input#password.form-control.form-control-lg{
-     border-radius: 6px;
-   font-size: 16px;
-}
-
-
-div.toggle-sensitive-wrapper.small-screens-only.input-group > input.form-control.form-control-lg {
-  border-radius: 6px;
-}
-
-/* Login button styling */
 body.pagelayout-login #loginbtn {
   width: 100%;
   border-radius: 6px;
   color: #fff;
   padding: 0.75rem;
-   font-size: 16px;
+  font-size: 16px;
   font-weight: 600;
   border: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
 body.pagelayout-login #loginbtn:hover {
   background-color: #e00a51;
-  cursor: pointer;
 }
 
-
-/* ===================================================
-   ANIMATIONS
-=================================================== */
-
-/* Slide in from the right */
-@keyframes slideInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Fade in and rise */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-
-/* ===================================================
-   MOBILE LOGIN PAGE OVERRIDES
-=================================================== */
+/* Mobile login */
 @media (max-width: 767.98px) {
-  /* Center the login container vertically */
-  #page-wrapper #page {
+
+  body.pagelayout-login #page-wrapper #page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
   }
 
-  /* White login box styling with animation */
   body.pagelayout-login .login-container {
     height: auto;
     margin: 0 auto;
@@ -221,146 +125,72 @@ body.pagelayout-login #loginbtn:hover {
     padding: 32px 16px;
     border-radius: 6px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
     animation: fadeInUpMobile 0.6s ease-out both;
   }
 
-  /* Center form inside the box */
-  body.pagelayout-login .login-container > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  /* Logo size */
   body.pagelayout-login img.img-fluid {
     width: 180px;
     margin-bottom: 16px;
   }
-
-  /* Input fields */
-  body.pagelayout-login .form-control.form-control-lg {
-    font-size: 15px;
-    border-radius: 6px;
-  }
-
-  /* Login button */
-  body.pagelayout-login #loginbtn {
-    font-size: 15px;
-    padding: 0.65rem;
-    border-radius: 6px;
-    width: 100%;
-    transition: background-color 0.3s ease;
-  }
-
-  body.pagelayout-login #loginbtn:hover {
-    background-color: #e00a51;
-    cursor: pointer;
-  }
 }
 
-/* ===================================================
-   MOBILE FADE-IN ANIMATION
-=================================================== */
+/* LOGIN PAGE ANIMATIONS */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes fadeInUpMobile {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-
 
 
 /* ===================================================
-   
-           THEME STYLING
-
+   GLOBAL THEME STYLES
 =================================================== */
 
-/*-------DESKTOP AND MOBILE LOGO-----------*/
-img.logo.me-1 {
-  width:220px;
+/* LOGOS */
+img.logo.me-1 { width: 220px; }
+img.logo.py-1.h-100 { width: 200px; }
+
+/* MOBILE DRAWER */
+.drawer-primary .list-group-item {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-img.logo.py-1.h-100 {
-   width: 200px;
-}
-
-/*---MOBILE SIDE MENU----*/
-.drawer-primary .drawercontent .list-group .list-group-item{
-padding-top: 15px;
-   padding-bottom: 15px;
-}
-
-/*----------SITE BUTTONS STYLING-----------*/
+/* BUTTONS */
 .btn-primary {
-  background-color: #00192D;       // Your brand red
-  border: none;
+  background-color: #00192D;
   border-radius: 6px;
   color: #fff !important;
- font-size: 15px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
-  background-color: #e00a51 !important;
-  cursor: pointer;
-}
+.btn-primary:hover { background-color: #e00a51 !important; }
 
 .btn-secondary {
   background-color: #CED4DA;
   color: #00192D;
-  border: none;
   border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
 .btn-secondary:hover {
   background-color: #00192D;
   color: #fff !important;
-  cursor: pointer;
 }
 
-
-
-/* ===================================================
-   
-   HOME COURSE CARDS
-
-=================================================== */
-
-
-.course-card.mx-1.mb-2 {
-width: 320px;
-}
-.course-card .card-img-top, .theme-card .card-img-top {
-    height: 9.5rem;
-    background-position: center;
-    background-size: cover;
-}
-
-a.aalink.coursename.me-2.mb-1 {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-
-
-/* ===================================================
-   
-   MAIN MENU STYLING
-
-=================================================== */
+/* MAIN MENU */
 .moremenu .nav-link {
   color: #565f66;
   font-weight: 400;
-  border: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s ease, color 0.3s ease;
 }
@@ -370,459 +200,103 @@ a.aalink.coursename.me-2.mb-1 {
   color: #00192D;
 }
 
-.moremenu .nav-link.active,
-.moremenu .nav-link.active_tree_node {
+.moremenu .nav-link.active {
   border-bottom: 1px solid #e60023;
   color: #00192D;
-   font-weight: 600;
-}
-
-.moremenu .nav-link:focus {
-  outline: none;
-  box-shadow: none;
-  border: none;
-}
-
-
-
-
-
-/* ===================================================
-   DASHBOARD SUPPORT FORM SECTION )
-=================================================== */
-
-.pc-button {
-  background-color: #00192D; /* Dark Pixel Craft colour */
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  padding: 0.75rem 2rem;
-  cursor: pointer;
   font-weight: 600;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  text-align: center;
 }
-
-.pc-button:hover {
-  background-color: #d32f2f; /* Pixel Red on hover */
-}
-
 
 
 /* ===================================================
-   DASHBOARD CUSTOM SECTION (Fixed)
+   DASHBOARD ONLY — COMPLETELY ISOLATED
 =================================================== */
 
-.pc-profile-widget {
+body#page-my-index .pc-profile-widget,
+body#page-my-index .pc-stats,
+body#page-my-index .pc-stat-tile,
+body#page-my-index .block_html .card-body,
+body#page-my-index .card-body:has(.pc-profile-widget) {
+  /* scoping protects Site Home from breaking */
+}
+
+/* Dashboard container */
+body#page-my-index .pc-profile-widget {
   background: white;
   border-radius: 8px;
   text-align: center;
-  max-width: 100%;
-  overflow: hidden;
-  font-family: 'Inter', sans-serif;
-  margin-bottom: 0; /* Remove unwanted bottom space */
 }
 
-.card-body:has(.pc-profile-widget) {
-  padding: 0 !important;
-  border-radius: 0 !important;
-}
-
-/* Avatar image */
-img.pc-avatar {
+/* Avatar */
+body#page-my-index img.pc-avatar {
   border: 2px solid #DEE2E6;
   border-radius: 50%;
   width: 96px;
   height: 96px;
   object-fit: cover;
-  margin-bottom: 1rem;
   animation: zoomIn 0.6s ease-out forwards;
   opacity: 0;
 }
 
-/* Name & email */
-.pc-name {
+/* Name */
+body#page-my-index .pc-name {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 0.3rem;
   animation: fadeUp 0.6s ease-out forwards;
-  animation-delay: 0.4s;
   opacity: 0;
 }
 
-.pc-email {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-/* Edit Profile link */
-.pc-edit {
-  display: inline-block;
-  font-size: 0.9rem;
-  color: #d32f2f;
-  margin-bottom: 1.5rem;
-  text-decoration: none;
-  font-weight: 600;
-  animation: fadeUp 0.6s ease-out forwards;
-  animation-delay: 0.6s;
-  opacity: 0;
-}
-
-/* Stats section container */
-.pc-stats {
+/* Stats grid */
+body#page-my-index .pc-stats {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   background: #00192D;
-  border-radius: 0 0 8px 8px;
   padding: 1rem;
   gap: 1rem;
-  margin: 0;
 }
 
-/* Individual tiles */
-.pc-stat-tile {
+body#page-my-index .pc-stat-tile {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   padding: 1rem;
   border-radius: 6px;
-  background-color: #00192D;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  flex: 1 1 22%;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  background: #00192D;
+  color: white;
   animation: zoomIn 0.4s ease-out forwards;
   opacity: 0;
   transform: scale(0.95);
 }
 
-.pc-stat-tile:hover {
+body#page-my-index .pc-stat-tile:hover {
   background-color: #e00a51;
-  color: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-.pc-stat-tile:hover .pc-label,
-.pc-stat-tile:hover .pc-desc {
-  color: #fff;
-}
-
-.pc-label {
-  font-weight: 600;
-  color: white;
-  font-size: 1rem;
-  margin-bottom: 0.2rem;
-}
-
-.pc-desc {
-  font-size: 0.75rem;
-  color: #ced4da;
-  transition: color 0.3s ease;
-}
-
-/* Staggered delays for animations */
-.pc-stat-tile:nth-child(1) { animation-delay: 0.8s; }
-.pc-stat-tile:nth-child(2) { animation-delay: 1s; }
-.pc-stat-tile:nth-child(3) { animation-delay: 1.2s; }
-.pc-stat-tile:nth-child(4) { animation-delay: 1.4s; }
-
-/* Tablet view */
-@media (max-width: 991px) {
-  .pc-stat-tile {
-    flex: 1 1 45%;
-  }
-
-  .pc-name {
-    font-size: 1.3rem;
-  }
-}
-
-/* Mobile view */
-@media (max-width: 600px) {
-  .pc-stats {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .pc-stat-tile {
-    flex: 1 1 100%;
-    width: 100%;
-  }
-
-  img.pc-avatar {
-    width: 72px;
-    height: 72px;
-  }
-
-  .pc-name {
-    font-size: 1.1rem;
-  }
-
-  .pc-label {
-    font-size: 0.95rem;
-  }
-
-  .pc-desc {
-    font-size: 0.7rem;
-  }
-}
-
-/* ===============================
-   ANIMATIONS
-=============================== */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Dashboard animations */
 @keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.block_html .card-body {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-.pc-profile-widget {
-  margin-bottom: 0 !important;
-}
-.pc-stats {
-  margin-bottom: 0 !important;
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 
-/* ===============================
-   ANIMATIONS
-=============================== */
-
-/* Fade-up and zoom-in base */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* === Apply animations === */
-
-.pc-avatar img {
-  animation: zoomIn 0.6s ease-out forwards;
-  opacity: 0;
-}
-
-.pc-name {
-  animation: fadeUp 0.6s ease-out forwards;
-  animation-delay: 0.4s;
-  opacity: 0;
-}
-
-.pc-edit {
-  animation: fadeUp 0.6s ease-out forwards;
-  animation-delay: 0.6s;
-  opacity: 0;
-}
-
-.pc-stat-tile {
-  opacity: 0;
-  transform: scale(0.9);
-  animation: zoomIn 0.4s ease-out forwards;
-}
-
-/* === Staggered delays for tiles === */
-.pc-stat-tile:nth-child(1) {
-  animation-delay: 0.8s;
-}
-.pc-stat-tile:nth-child(2) {
-  animation-delay: 1s;
-}
-.pc-stat-tile:nth-child(3) {
-  animation-delay: 1.2s;
-}
-.pc-stat-tile:nth-child(4) {
-  animation-delay: 1.4s;
-}
-
-
-
-
-
-/* ===============================
-   SUPPORT FORM
-=============================== */
-
-/* ===== Pixel Craft Help Form Styling ===== */
+/* ===================================================
+   SUPPORT FORM (GLOBAL COMPONENT)
+=================================================== */
 
 .pc-help-form-block {
   background: white;
   padding: 2.5rem;
   margin: 4rem auto;
   border-radius: 16px;
-   max-width: 600px;
-  font-family: 'Inter', sans-serif;
-}
-
-.pc-help-title {
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  font-weight: 600;
-  color: #00192D;
-}
-
-.pc-form-group {
-  margin-bottom: 1.5rem;
-  transition: all 0.3s ease;
-}
-
-.pc-form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  color: #333;
-}
-
-.pc-form-group input,
-.pc-form-group select,
-.pc-form-group textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fafafa;
-  transition: border-color 0.2s ease, background 0.2s ease;
-}
-
-.pc-form-group input:focus,
-.pc-form-group select:focus,
-.pc-form-group textarea:focus {
-  border-color: #d32f2f;
-  outline: none;
-  background: #fff;
-}
-
-.pc-button {
-  background: #d32f2f;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  padding: 0.75rem 2rem;
-  cursor: pointer;
-  font-weight: 600;
-  display: inline-block;
-  transition: background 0.3s ease;
-  width: 100%;
-  text-align: center;
-}
-
-.pc-button:hover {
-  background: #b02a27;
-}
-
-/* Hidden field control */
-.pc-form-group.hidden {
-  display: none;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 600px) {
-  .pc-help-form-block {
-    padding: 1.5rem;
-    margin: 2rem 1rem;
-  }
-
-  .pc-help-title {
-    font-size: 1.5rem;
-  }
-
-  .pc-button {
-    font-size: 0.95rem;
-    padding: 0.75rem 1.25rem;
-  }
+  max-width: 600px;
 }
 
 
+/* ===================================================
+   FOLDER ICON FIX
+=================================================== */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 🎨 Light-green folder icon (#CCFF99) */
-
-/* 1️⃣ Course page (activity list) */
-li.activity.folder.modtype_folder.hasinfo img.activityicon {
-  filter: invert(93%) sepia(8%) saturate(2376%)
-          hue-rotate(39deg) brightness(102%) contrast(101%) !important;
-}
-
-/* 2️⃣ Inside the folder view page */
-.path-mod-folder img.activityicon {
-  filter: none !important; /* neutralise Boost Union’s injected purple filter */
-  -webkit-filter: none !important;
-  filter: invert(93%) sepia(8%) saturate(2376%)
-          hue-rotate(39deg) brightness(102%) contrast(101%) !important;
-}
-
-
-
-
-
-/* 🎨 Light-green big header icon – only for Folder pages (#CCFF99) */
+li.activity.folder.modtype_folder.hasinfo img.activityicon,
+.path-mod-folder img.activityicon,
 .path-mod-folder #page-header .page-header-image img {
-  filter: none !important;  /* remove Boost Union's purple filter */
-  -webkit-filter: none !important;
-
-  /* apply your light-green tint */
   filter: invert(93%) sepia(8%) saturate(2376%)
           hue-rotate(39deg) brightness(102%) contrast(101%) !important;
 }
-
