@@ -72,50 +72,67 @@ h1, h2, h3, h4, h5, h6,
 
 
 /* =========================
-   LOGIN PANEL WIDTH + POSITION FIX
+   LOGIN — NO SCROLL FIX
 ========================= */
 
-/* Force layout to full width */
+/* Reset page */
+body.pagelayout-login {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;   /* 🔥 stops scroll */
+}
+
+/* Full layout */
+body.pagelayout-login #page-wrapper {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
 body.pagelayout-login #page {
   display: flex;
   width: 100%;
+  height: 100vh;
 }
 
-/* LEFT SIDE (background area) */
+/* LEFT SIDE */
 body.pagelayout-login #region-main-box {
   flex: 1;
+  height: 100%;
 }
 
-/* RIGHT PANEL — FORCE WIDTH */
+/* RIGHT PANEL */
 body.pagelayout-login .login-container {
-  flex: 0 0 360px;      /* THIS overrides Bootstrap */
-  max-width: 360px;
-  width: 360px !important;
+  flex: 0 0 340px;
+  max-width: 340px;
+  width: 340px;
 
-  height: 100vh;
+  height: 100%;
   padding: 20px;
 
-  background: #fff;     /* ensure white panel stays clean */
+  background: #fff;
+  box-sizing: border-box;  /* 🔥 prevents overflow */
 }
 
-/* CENTER CONTENT (your working fix) */
+/* CENTER CONTENT */
 body.pagelayout-login .login-container > div {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   height: 100%;
-  padding-top: 18vh;
+
+  padding-top: 16vh;  /* slightly reduced */
 }
 
 /* FORM */
 body.pagelayout-login .loginform {
   width: 100%;
-  max-width: 300px;   /* slightly tighter = less “fat” */
+  max-width: 300px;
+
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
-
 /* =========================
    BUTTONS
 ========================= */
