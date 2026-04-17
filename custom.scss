@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6,
 
 
 /* =========================
-   LOGIN (FIXED CENTER + FULL HEIGHT)
+   LOGIN (FINAL CENTER FIX)
 ========================= */
 
 body.pagelayout-login {
@@ -96,26 +96,25 @@ body.pagelayout-login #region-main-box {
   height: 100vh;
 }
 
-/* RIGHT PANEL (WHITE BAR) */
+/* RIGHT PANEL */
 body.pagelayout-login .login-container {
   width: 360px;
   height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   padding: 20px;
 }
 
-/* INNER CONTENT */
+/* 🔥 THIS IS YOUR FIX — CLEANED */
 body.pagelayout-login .login-container > div {
-  width: 100%;
-  max-width: 320px;
+  display: flex;
+  align-items: center;      /* vertical centering */
+  justify-content: center;  /* horizontal centering */
+  height: 100%;
 }
 
-/* FORM SPACING */
+/* FORM */
 body.pagelayout-login .loginform {
+  width: 100%;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -134,7 +133,6 @@ body.pagelayout-login .loginform {
 #loginbtn:hover {
   background-color: $brand-red;
 }
-
 
 /* =========================
    BUTTONS
