@@ -1,306 +1,166 @@
+/* =====================================================
+   PIXEL CRAFT MOODLE UI SYSTEM
+   Clean, structured, maintainable SCSS
+===================================================== */
 
 
+/* =========================
+   DESIGN SYSTEM
+========================= */
+
+$primary: #e60023;
+$primary-hover: darken($primary, 10%);
+$text-dark: #000;
+$text-light: #fff;
+$bg-light: #f8f9fa;
+$border-light: #e5e5e5;
+$radius: 8px;
+$transition: all 0.3s ease;
 
 
-/* ===================================================
-   PIXEL CRAFT — GLOBAL FONTS & BASE RESET
-=================================================== */
+/* =========================
+   GLOBAL STYLES
+========================= */
 
-/* Debug background (remove when done) */
-/* body { background: #ff00ff !important; } */
-
-/* --- FONT-FACE DECLARATIONS --- */
-@font-face {
-  font-family: 'Poppins';
-  src: url("https://learn.pixelcrafttraining.co.za/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-Regular.woff2") format('woff2');
-  font-weight: 400;
-  font-style: normal;
+body {
+  color: $text-dark;
+  background-color: $bg-light;
 }
 
-@font-face {
-  font-family: 'Poppins';
-  src: url("https://learn.pixelcrafttraining.co.za/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-Medium.woff2") format('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: $transition;
 
-@font-face {
-  font-family: 'Poppins';
-  src: url("https://learn.pixelcrafttraining.co.za/pluginfile.php/1/theme_boost_union/customfonts/0/Poppins-Black.woff2") format('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url("https://learn.pixelcrafttraining.co.za/pluginfile.php/1/theme_boost_union/customfonts/0/Inter-Regular.woff2") format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* --- GLOBAL FONT USAGE --- */
-body, html, .content, .usertext, .form-control, .card-text {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-}
-
-h1, h2, h3, h4, h5, h6,
-.navbar, .dropdown-menu, .btn, .card-title, .breadcrumb {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-}
-
-/* Header page title (course or dashboard name) */
-#page-header h1 {
-  font-size: 36px !important;
-  font-weight: 400 !important;
-}
-
-
-/* ===================================================
-   LOGIN PAGE CUSTOMISATION
-=================================================== */
-
-body.pagelayout-login div.container-fluid.pt-5.mt-0 {
-  padding: 0 !important;
-  overflow: hidden;
-}
-
-body.pagelayout-login #page-wrapper {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-body.pagelayout-login .login-container {
-  width: 320px !important;
-  height: 100vh;
-  padding: 20px;
-  overflow: hidden;
-  animation: slideInRight 0.6s ease-out forwards;
-}
-
-body.pagelayout-login .login-container > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-body.pagelayout-login .loginform {
-  animation: fadeInUp 0.6s ease-out 0.5s forwards;
-  opacity: 0;
-}
-
-body.pagelayout-login img.img-fluid {
-  width: 240px;
-  margin-bottom: 20px;
-}
-
-body.pagelayout-login #loginbtn {
-  width: 100%;
-  border-radius: 6px;
-  color: #fff;
-  padding: 0.75rem;
-  font-size: 16px;
-  font-weight: 600;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-body.pagelayout-login #loginbtn:hover {
-  background-color: #e00a51;
-}
-
-/* Mobile login */
-@media (max-width: 767.98px) {
-
-  body.pagelayout-login #page-wrapper #page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-  }
-
-  body.pagelayout-login .login-container {
-    height: auto;
-    margin: 0 auto;
-    max-width: 90vw;
-    padding: 32px 16px;
-    border-radius: 6px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    animation: fadeInUpMobile 0.6s ease-out both;
-  }
-
-  body.pagelayout-login img.img-fluid {
-    width: 180px;
-    margin-bottom: 16px;
+  &:hover {
+    color: $primary-hover;
   }
 }
 
-/* LOGIN PAGE ANIMATIONS */
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(60px); }
-  to { opacity: 1; transform: translateX(0); }
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.moremenu .nav-link {
+  color: $text-dark;
+  transition: $transition;
+  border-radius: $radius;
+
+  &:hover {
+    background-color: $primary;
+    color: $text-light;
+  }
 }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUpMobile {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Active nav item */
+.moremenu .nav-link.active {
+  background-color: $primary;
+  color: $text-light;
 }
 
 
-/* ===================================================
-   GLOBAL THEME STYLES
-=================================================== */
+/* =========================
+   BUTTONS
+========================= */
 
-/* LOGOS */
-img.logo.me-1 { width: 220px; }
-img.logo.py-1.h-100 { width: 200px; }
-
-/* MOBILE DRAWER */
-.drawer-primary .list-group-item {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-/* BUTTONS */
 .btn-primary {
-  background-color: #00192D;
-  border-radius: 6px;
-  color: #fff !important;
-  transition: background-color 0.3s ease;
-}
+  background-color: $primary;
+  border-color: $primary;
+  border-radius: $radius;
+  transition: $transition;
 
-.btn-primary:hover { background-color: #e00a51 !important; }
+  &:hover {
+    background-color: $primary-hover;
+    border-color: $primary-hover;
+  }
+}
 
 .btn-secondary {
-  background-color: #CED4DA;
-  color: #00192D;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background-color: #00192D;
-  color: #fff !important;
-}
-
-/* MAIN MENU */
-.moremenu .nav-link {
-  color: #565f66;
-  font-weight: 400;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease, color 0.3s ease;
-}
-
-.moremenu .nav-link:hover {
-  border-bottom: 1px solid #333;
-  color: #00192D;
-}
-
-.moremenu .nav-link.active {
-  border-bottom: 1px solid #e60023;
-  color: #00192D;
-  font-weight: 600;
+  border-radius: $radius;
+  transition: $transition;
 }
 
 
-/* ===================================================
-   DASHBOARD ONLY — COMPLETELY ISOLATED
-=================================================== */
+/* =========================
+   CARDS / CONTENT BLOCKS
+========================= */
 
-body#page-my-index .pc-profile-widget,
-body#page-my-index .pc-stats,
-body#page-my-index .pc-stat-tile,
-body#page-my-index .block_html .card-body,
-body#page-my-index .card-body:has(.pc-profile-widget) {
-  /* scoping protects Site Home from breaking */
-}
+.card {
+  border: 1px solid $border-light;
+  border-radius: $radius;
+  transition: $transition;
 
-/* Dashboard container */
-body#page-my-index .pc-profile-widget {
-  background: white;
-  border-radius: 8px;
-  text-align: center;
-}
-
-/* Avatar */
-body#page-my-index img.pc-avatar {
-  border: 2px solid #DEE2E6;
-  border-radius: 50%;
-  width: 96px;
-  height: 96px;
-  object-fit: cover;
-  animation: zoomIn 0.6s ease-out forwards;
-  opacity: 0;
-}
-
-/* Name */
-body#page-my-index .pc-name {
-  font-size: 1.5rem;
-  font-weight: 600;
-  animation: fadeUp 0.6s ease-out forwards;
-  opacity: 0;
-}
-
-/* Stats grid */
-body#page-my-index .pc-stats {
-  display: flex;
-  flex-wrap: wrap;
-  background: #00192D;
-  padding: 1rem;
-  gap: 1rem;
-}
-
-body#page-my-index .pc-stat-tile {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  border-radius: 6px;
-  background: #00192D;
-  color: white;
-  animation: zoomIn 0.4s ease-out forwards;
-  opacity: 0;
-  transform: scale(0.95);
-}
-
-body#page-my-index .pc-stat-tile:hover {
-  background-color: #e00a51;
-}
-
-/* Dashboard animations */
-@keyframes zoomIn {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+  &:hover {
+    transform: translateY(-2px);
+  }
 }
 
 
-/* ===================================================
-   SUPPORT FORM (GLOBAL COMPONENT)
-=================================================== */
+/* =========================
+   FORMS
+========================= */
 
-.pc-help-form-block {
-  background: white;
-  padding: 2.5rem;
-  margin: 4rem auto;
-  border-radius: 16px;
-  max-width: 600px;
+.form-control {
+  border-radius: $radius;
+  border: 1px solid $border-light;
+  transition: $transition;
+
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 0.1rem rgba(230, 0, 35, 0.2);
+  }
 }
 
 
-/* ===================================================
-   FOLDER ICON FIX
-=================================================== */
+/* =========================
+   LOGIN PAGE (CLEAN LOOK)
+========================= */
 
-li.activity.folder.modtype_folder.hasinfo img.activityicon,
-.path-mod-folder img.activityicon,
-.path-mod-folder #page-header .page-header-image img {
-  filter: invert(93%) sepia(8%) saturate(2376%)
-          hue-rotate(39deg) brightness(102%) contrast(101%) !important;
+.login-container {
+  .card {
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+}
+
+
+/* =========================
+   DASHBOARD BLOCKS
+========================= */
+
+.block {
+  border-radius: $radius;
+  border: 1px solid $border-light;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+
+/* =========================
+   TABLES
+========================= */
+
+.table {
+  border-radius: $radius;
+  overflow: hidden;
+
+  th {
+    background-color: $bg-light;
+  }
+}
+
+
+/* =========================
+   SMOOTH HOVER FIX (YOUR ISSUE)
+========================= */
+
+.moremenu .nav-link,
+.btn,
+.card,
+.block {
+  transition: $transition;
 }
