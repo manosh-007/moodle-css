@@ -173,15 +173,14 @@ a {
 
 
 /* =========================
-   LINKS (CLEAN + NEUTRAL)
+   ADMIN LINKS
 ========================= */
 
-a {
-  color: $text-main;   /* NOT red */
-  text-decoration: none;
+.path-admin .list-unstyled a {
+  color: $text-muted;
   transition: all $speed;
 
   &:hover {
-    color: $primary;   /* red only on hover */
+    color: $primary;
   }
 }
