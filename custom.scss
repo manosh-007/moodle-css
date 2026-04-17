@@ -46,7 +46,7 @@ a {
   transition: all $speed;
 
   &:hover {
-    background: $primary;
+    background: grey;
     color: $text-light;
   }
 }
