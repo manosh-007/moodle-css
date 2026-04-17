@@ -71,18 +71,32 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
+
+
+
+
+
 /* =========================
-   LOGIN — NO SCROLL FIX
+   LOGIN — FINAL COMPLETE BLOCK
 ========================= */
 
-/* Reset page */
+/* RESET */
 body.pagelayout-login {
   height: 100vh;
   margin: 0;
-  overflow: hidden;   /* 🔥 stops scroll */
+  overflow: hidden;
 }
 
-/* Full layout */
+/* REMOVE MOODLE / BOOTSTRAP SPACING */
+body.pagelayout-login .container-fluid,
+body.pagelayout-login .login-wrapper,
+body.pagelayout-login .pt-5,
+body.pagelayout-login .mt-0 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* MAIN LAYOUT */
 body.pagelayout-login #page-wrapper {
   height: 100vh;
   display: flex;
@@ -92,16 +106,16 @@ body.pagelayout-login #page-wrapper {
 body.pagelayout-login #page {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
-/* LEFT SIDE */
+/* LEFT SIDE (background area) */
 body.pagelayout-login #region-main-box {
   flex: 1;
   height: 100%;
 }
 
-/* RIGHT PANEL */
+/* RIGHT PANEL (white login panel) */
 body.pagelayout-login .login-container {
   flex: 0 0 340px;
   max-width: 340px;
@@ -111,17 +125,16 @@ body.pagelayout-login .login-container {
   padding: 20px;
 
   background: #fff;
-  box-sizing: border-box;  /* 🔥 prevents overflow */
+  box-sizing: border-box;
 }
 
-/* CENTER CONTENT */
+/* 🔥 CORE CENTERING FIX */
 body.pagelayout-login .login-container > div {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-start;   /* not true center */
   height: 100%;
-
-  padding-top: 16vh;  /* slightly reduced */
+  padding-top: 16vh;         /* adjust 14–18vh if needed */
 }
 
 /* FORM */
@@ -133,6 +146,35 @@ body.pagelayout-login .loginform {
   flex-direction: column;
   gap: 14px;
 }
+
+/* LOGO */
+body.pagelayout-login img.img-fluid {
+  width: 220px;
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+#loginbtn {
+  width: 100%;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+#loginbtn:hover {
+  background-color: #e00a51;
+}
+
+
+
+
+
+
+
+
+
 /* =========================
    BUTTONS
 ========================= */
