@@ -169,7 +169,39 @@ body.pagelayout-login img.img-fluid {
 
 
 
+/* =========================
+   LOGIN — TRUE SCROLL FIX
+========================= */
 
+/* Lock full viewport */
+body.pagelayout-login {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Fix main wrapper */
+body.pagelayout-login .login-wrapper.login-wrapper-right {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+/* Fix main content region */
+body.pagelayout-login #region-main-box {
+  flex: 1;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+/* Kill Bootstrap spacing completely */
+body.pagelayout-login .container-fluid,
+body.pagelayout-login .pt-5,
+body.pagelayout-login .mt-0 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
 
 
