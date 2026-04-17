@@ -1,10 +1,10 @@
 /* ===================================================
-   PIXEL CRAFT — CLEANED SYSTEM (SAME LOOK)
+   PIXEL CRAFT — FINAL CLEAN SYSTEM (FULL REPLACE)
 =================================================== */
 
 
 /* =========================
-   VARIABLES (YOUR COLORS)
+   VARIABLES
 ========================= */
 
 $brand-dark: #00192D;
@@ -72,21 +72,56 @@ h1, h2, h3, h4, h5, h6,
 
 
 /* =========================
-   LOGIN PAGE
+   LOGIN (FIXED CENTER + FULL HEIGHT)
 ========================= */
 
-body.pagelayout-login .login-container {
-  width: 320px !important;
+body.pagelayout-login {
   height: 100vh;
+  margin: 0;
+}
+
+body.pagelayout-login #page-wrapper {
+  height: 100vh;
+  display: flex;
+}
+
+body.pagelayout-login #page {
+  display: flex;
+  width: 100%;
+}
+
+/* LEFT SIDE */
+body.pagelayout-login #region-main-box {
+  flex: 1;
+  height: 100vh;
+}
+
+/* RIGHT PANEL (WHITE BAR) */
+body.pagelayout-login .login-container {
+  width: 360px;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding: 20px;
-  animation: slideInRight 0.6s ease-out forwards;
 }
 
+/* INNER CONTENT */
+body.pagelayout-login .login-container > div {
+  width: 100%;
+  max-width: 320px;
+}
+
+/* FORM SPACING */
 body.pagelayout-login .loginform {
-  animation: fadeInUp 0.6s ease-out 0.5s forwards;
-  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
+/* BUTTON */
 #loginbtn {
   width: 100%;
   border-radius: $radius;
@@ -129,7 +164,7 @@ body.pagelayout-login .loginform {
 
 
 /* =========================
-   MAIN NAV (UNCHANGED LOOK)
+   MAIN NAV
 ========================= */
 
 .moremenu .nav-link {
@@ -183,7 +218,6 @@ body#page-my-index {
   .pc-name {
     font-size: 1.5rem;
     font-weight: 600;
-    animation: fadeUp 0.6s ease-out forwards;
   }
 
   .pc-stats {
@@ -231,18 +265,8 @@ li.activity.folder.modtype_folder.hasinfo img.activityicon {
 
 
 /* =========================
-   ANIMATIONS (UNCHANGED)
+   ANIMATIONS
 ========================= */
-
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(60px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 @keyframes zoomIn {
   from { opacity: 0; transform: scale(0.8); }
