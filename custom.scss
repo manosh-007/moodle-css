@@ -173,13 +173,15 @@ a {
 
 
 /* =========================
-   LINKS INSIDE ADMIN
+   LINKS (CLEAN + NEUTRAL)
 ========================= */
 
-.path-admin a {
-  color: $primary;
+a {
+  color: $text-main;   /* NOT red */
+  text-decoration: none;
+  transition: all $speed;
 
   &:hover {
-    color: $primary-hover;
+    color: $primary;   /* red only on hover */
   }
 }
