@@ -173,6 +173,19 @@ border-radius: 0px;
 
 
 /* =========================
+   REMOVE BOOTSTRAP BLUE FLASH
+========================= */
+
+#loginbtn:focus,
+#loginbtn:active,
+#loginbtn:focus:active,
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* =========================
    LOGIN — TRUE SCROLL FIX
 ========================= */
 
