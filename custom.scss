@@ -1,25 +1,23 @@
 /* =====================================================
-   PIXEL CRAFT SIMPLE UI SYSTEM
-   Built for EASY editing and control
+   PIXEL CRAFT FINAL CLEAN SYSTEM
 ===================================================== */
 
 
 /* =========================
-   1. QUICK EDIT ZONE
-   Change these only
+   VARIABLES (EDIT THESE ONLY)
 ========================= */
 
-$primary: #e60023;        /* Main brand colour */
-$primary-hover: #b8001c;  /* Hover colour */
-$text-dark: #111;         /* Main text */
-$text-light: #fff;        /* Light text */
-$bg: #f5f5f7;             /* Page background */
-$radius: 6px;             /* Rounded corners */
-$speed: 0.25s ease;       /* Animation speed */
+$primary: #e60023;
+$primary-hover: darken($primary, 10%);
+$text-dark: #111;
+$text-light: #fff;
+$bg: #f5f5f7;
+$radius: 6px;
+$speed: 0.25s ease;
 
 
 /* =========================
-   2. GLOBAL BASE
+   BASE
 ========================= */
 
 body {
@@ -38,7 +36,7 @@ a {
 
 
 /* =========================
-   3. NAVIGATION
+   NAVIGATION (ONLY ONE VERSION)
 ========================= */
 
 .moremenu .nav-link {
@@ -59,7 +57,7 @@ a {
 
 
 /* =========================
-   4. BUTTONS
+   BUTTONS
 ========================= */
 
 .btn {
@@ -79,7 +77,7 @@ a {
 
 
 /* =========================
-   5. CARDS / BLOCKS
+   CARDS / BLOCKS
 ========================= */
 
 .card,
@@ -95,7 +93,7 @@ a {
 
 
 /* =========================
-   6. FORMS
+   FORMS
 ========================= */
 
 .form-control {
@@ -110,21 +108,9 @@ a {
 
 
 /* =========================
-   7. TABLES
+   TABLES
 ========================= */
 
 .table th {
   background: #eee;
-}
-
-
-/* =========================
-   8. SMOOTH HOVER FIX
-========================= */
-
-.moremenu .nav-link,
-.btn,
-.card,
-.block {
-  transition: all $speed;
 }
