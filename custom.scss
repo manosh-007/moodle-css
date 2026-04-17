@@ -72,19 +72,10 @@ h1, h2, h3, h4, h5, h6,
 
 
 /* =========================
-   LOGIN — FINAL REPLACEMENT
+   LOGIN PANEL WIDTH + POSITION FIX
 ========================= */
 
-body.pagelayout-login {
-  height: 100vh;
-  margin: 0;
-}
-
-body.pagelayout-login #page-wrapper {
-  height: 100vh;
-  display: flex;
-}
-
+/* Force layout to full width */
 body.pagelayout-login #page {
   display: flex;
   width: 100%;
@@ -93,53 +84,36 @@ body.pagelayout-login #page {
 /* LEFT SIDE (background area) */
 body.pagelayout-login #region-main-box {
   flex: 1;
-  height: 100vh;
 }
 
-/* RIGHT PANEL (white panel) */
+/* RIGHT PANEL — FORCE WIDTH */
 body.pagelayout-login .login-container {
-  width: 360px;
+  flex: 0 0 360px;      /* THIS overrides Bootstrap */
+  max-width: 360px;
+  width: 360px !important;
+
   height: 100vh;
   padding: 20px;
+
+  background: #fff;     /* ensure white panel stays clean */
 }
 
-/* 🔥 CORE FIX — CONTROL THE REAL WRAPPER */
+/* CENTER CONTENT (your working fix) */
 body.pagelayout-login .login-container > div {
   display: flex;
   justify-content: center;
-  align-items: flex-start;   /* important: NOT center */
+  align-items: flex-start;
   height: 100%;
-  padding-top: 18vh;         /* adjust this if needed */
+  padding-top: 18vh;
 }
 
-/* FORM STRUCTURE */
+/* FORM */
 body.pagelayout-login .loginform {
   width: 100%;
-  max-width: 320px;
-
+  max-width: 300px;   /* slightly tighter = less “fat” */
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-
-/* LOGO */
-body.pagelayout-login img.img-fluid {
-  width: 220px;
-  margin-bottom: 10px;
-}
-
-/* BUTTON */
-#loginbtn {
-  width: 100%;
-  border-radius: 6px;
-  color: #fff;
-  font-weight: 600;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-#loginbtn:hover {
-  background-color: #e00a51;
+  gap: 14px;
 }
 
 /* =========================
