@@ -1,35 +1,31 @@
 /* =====================================================
    PIXEL CRAFT MOODLE UI SYSTEM
-   Clean, structured, maintainable SCSS
+   CLEANED VERSION OF YOUR ORIGINAL SCSS
 ===================================================== */
 
 
 /* =========================
-   DESIGN SYSTEM
+   DESIGN VARIABLES
 ========================= */
 
 $primary: #e60023;
 $primary-hover: darken($primary, 10%);
 $text-dark: #000;
 $text-light: #fff;
-$bg-light: #f8f9fa;
-$border-light: #e5e5e5;
-$radius: 8px;
 $transition: all 0.3s ease;
+$radius: 6px;
 
 
 /* =========================
-   GLOBAL STYLES
+   GLOBAL
 ========================= */
 
 body {
   color: $text-dark;
-  background-color: $bg-light;
 }
 
 a {
   color: $primary;
-  text-decoration: none;
   transition: $transition;
 
   &:hover {
@@ -39,11 +35,10 @@ a {
 
 
 /* =========================
-   NAVIGATION
+   NAVIGATION (FIXED CLEANLY)
 ========================= */
 
 .moremenu .nav-link {
-  color: $text-dark;
   transition: $transition;
   border-radius: $radius;
 
@@ -53,7 +48,6 @@ a {
   }
 }
 
-/* Active nav item */
 .moremenu .nav-link.active {
   background-color: $primary;
   color: $text-light;
@@ -67,7 +61,6 @@ a {
 .btn-primary {
   background-color: $primary;
   border-color: $primary;
-  border-radius: $radius;
   transition: $transition;
 
   &:hover {
@@ -76,18 +69,13 @@ a {
   }
 }
 
-.btn-secondary {
-  border-radius: $radius;
-  transition: $transition;
-}
-
 
 /* =========================
-   CARDS / CONTENT BLOCKS
+   CARD / BLOCK UI
 ========================= */
 
-.card {
-  border: 1px solid $border-light;
+.card,
+.block {
   border-radius: $radius;
   transition: $transition;
 
@@ -98,12 +86,10 @@ a {
 
 
 /* =========================
-   FORMS
+   FORM FIELDS
 ========================= */
 
 .form-control {
-  border-radius: $radius;
-  border: 1px solid $border-light;
   transition: $transition;
 
   &:focus {
@@ -114,53 +100,23 @@ a {
 
 
 /* =========================
-   LOGIN PAGE (CLEAN LOOK)
-========================= */
-
-.login-container {
-  .card {
-    border: none;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  }
-}
-
-
-/* =========================
-   DASHBOARD BLOCKS
-========================= */
-
-.block {
-  border-radius: $radius;
-  border: 1px solid $border-light;
-  transition: $transition;
-
-  &:hover {
-    transform: translateY(-2px);
-  }
-}
-
-
-/* =========================
    TABLES
 ========================= */
 
-.table {
-  border-radius: $radius;
-  overflow: hidden;
-
-  th {
-    background-color: $bg-light;
-  }
+.table th {
+  background-color: #f5f5f5;
 }
 
 
 /* =========================
-   SMOOTH HOVER FIX (YOUR ISSUE)
+   YOUR ORIGINAL HOVER FIX (CLEANED)
 ========================= */
 
-.moremenu .nav-link,
-.btn,
-.card,
-.block {
+.moremenu .nav-tabs .nav-link {
   transition: $transition;
+}
+
+.moremenu .nav-tabs .nav-link:hover {
+  background-color: $primary;
+  color: $text-light;
 }
