@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6,
 
 
 /* =========================
-   LOGIN (FINAL CENTER FIX)
+   LOGIN — FINAL REPLACEMENT
 ========================= */
 
 body.pagelayout-login {
@@ -90,48 +90,56 @@ body.pagelayout-login #page {
   width: 100%;
 }
 
-/* LEFT SIDE */
+/* LEFT SIDE (background area) */
 body.pagelayout-login #region-main-box {
   flex: 1;
   height: 100vh;
 }
 
-/* RIGHT PANEL */
+/* RIGHT PANEL (white panel) */
 body.pagelayout-login .login-container {
   width: 360px;
   height: 100vh;
   padding: 20px;
 }
 
-/* 🔥 THIS IS YOUR FIX — CLEANED */
+/* 🔥 CORE FIX — CONTROL THE REAL WRAPPER */
 body.pagelayout-login .login-container > div {
   display: flex;
-  align-items: center;      /* vertical centering */
-  justify-content: center;  /* horizontal centering */
+  justify-content: center;
+  align-items: flex-start;   /* important: NOT center */
   height: 100%;
+  padding-top: 18vh;         /* adjust this if needed */
 }
 
-/* FORM */
+/* FORM STRUCTURE */
 body.pagelayout-login .loginform {
   width: 100%;
   max-width: 320px;
+
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
+/* LOGO */
+body.pagelayout-login img.img-fluid {
+  width: 220px;
+  margin-bottom: 10px;
+}
+
 /* BUTTON */
 #loginbtn {
   width: 100%;
-  border-radius: $radius;
-  color: $text-inverse;
+  border-radius: 6px;
+  color: #fff;
   font-weight: 600;
   border: none;
-  transition: background-color $speed;
+  transition: background-color 0.3s ease;
 }
 
 #loginbtn:hover {
-  background-color: $brand-red;
+  background-color: #e00a51;
 }
 
 /* =========================
