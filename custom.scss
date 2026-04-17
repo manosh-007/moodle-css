@@ -1,10 +1,10 @@
 /* =====================================================
-   PIXEL CRAFT FINAL CLEAN SYSTEM
+   PIXEL CRAFT FINAL SYSTEM (CLEAN BASE)
 ===================================================== */
 
 
 /* =========================
-   VARIABLES (EDIT THESE ONLY)
+   VARIABLES
 ========================= */
 
 $primary: #e60023;
@@ -12,6 +12,7 @@ $primary-hover: darken($primary, 10%);
 $text-dark: #111;
 $text-light: #fff;
 $bg: #f5f5f7;
+$light-grey: #eee;
 $radius: 6px;
 $speed: 0.25s ease;
 
@@ -36,7 +37,7 @@ a {
 
 
 /* =========================
-   NAVIGATION (ONLY ONE VERSION)
+   NAVIGATION
 ========================= */
 
 .moremenu .nav-link {
@@ -112,5 +113,5 @@ a {
 ========================= */
 
 .table th {
-  background: #eee;
+  background: $light-grey;
 }
