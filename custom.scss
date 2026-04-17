@@ -1,18 +1,38 @@
 /* =====================================================
-   PIXEL CRAFT FINAL SYSTEM (CLEAN BASE)
+   PIXEL CRAFT UI SYSTEM (CLEAN + VARIABLE DRIVEN)
 ===================================================== */
 
 
 /* =========================
-   VARIABLES
+   COLOR SYSTEM
 ========================= */
 
 $primary: #e60023;
-$primary-hover: darken($primary, 10%);
-$text-dark: #111;
-$text-light: #fff;
-$bg: #f5f5f7;
-$light-grey: #eee;
+$primary-hover: #b8001c;
+$primary-soft: rgba(230, 0, 35, 0.08);
+
+$white: #ffffff;
+$black: #111111;
+
+$grey-50:  #fafafa;
+$grey-100: #f5f5f7;
+$grey-200: #eeeeee;
+$grey-300: #e0e0e0;
+$grey-400: #cccccc;
+$grey-500: #999999;
+$grey-600: #666666;
+
+$text-main: $black;
+$text-muted: $grey-600;
+$text-inverse: $white;
+
+$bg-page: $grey-100;
+$bg-card: $white;
+$bg-hover: $primary-soft;
+$bg-active: $primary;
+
+$border-light: $grey-300;
+
 $radius: 6px;
 $speed: 0.25s ease;
 
@@ -22,8 +42,8 @@ $speed: 0.25s ease;
 ========================= */
 
 body {
-  background: $bg;
-  color: $text-dark;
+  background: $bg-page;
+  color: $text-main;
 }
 
 a {
@@ -37,23 +57,56 @@ a {
 
 
 /* =========================
-   NAVIGATION
+   TOP NAV (Home, Dashboard)
 ========================= */
 
 .moremenu .nav-link {
+  color: $text-main;
   border-radius: $radius;
-  padding: 8px 12px;
+  padding: 8px 14px;
   transition: all $speed;
 
   &:hover {
-    background: grey;
-    color: black;
+    background: $bg-hover;
+    color: $primary;
   }
 }
 
 .moremenu .nav-link.active {
-  background: $primary;
-  color: black;
+  background: $bg-active;
+  color: $text-inverse;
+}
+
+
+/* =========================
+   SECONDARY NAV TABS (ADMIN)
+========================= */
+
+.nav-tabs .nav-link {
+  color: $text-main;
+  border: none;
+  border-radius: $radius;
+  padding: 8px 14px;
+  transition: all $speed;
+}
+
+/* Hover */
+.nav-tabs .nav-link:hover {
+  background: $bg-hover;
+  color: $primary;
+}
+
+/* Active */
+.nav-tabs .nav-link.active {
+  background: $bg-active;
+  color: $text-inverse !important;
+}
+
+/* Moodle weird state */
+.nav-tabs .nav-link.active_tree_node {
+  background: $bg-hover;
+  color: $primary;
+  opacity: 1;
 }
 
 
@@ -83,8 +136,9 @@ a {
 
 .card,
 .block {
+  background: $bg-card;
+  border: 1px solid $border-light;
   border-radius: $radius;
-  background: #fff;
   transition: all $speed;
 
   &:hover {
@@ -99,11 +153,12 @@ a {
 
 .form-control {
   border-radius: $radius;
+  border: 1px solid $border-light;
   transition: all $speed;
 
   &:focus {
     border-color: $primary;
-    box-shadow: 0 0 0 2px rgba(230, 0, 35, 0.2);
+    box-shadow: 0 0 0 2px $primary-soft;
   }
 }
 
@@ -113,5 +168,18 @@ a {
 ========================= */
 
 .table th {
-  background: $light-grey;
+  background: $grey-200;
+}
+
+
+/* =========================
+   LINKS INSIDE ADMIN
+========================= */
+
+.path-admin a {
+  color: $primary;
+
+  &:hover {
+    color: $primary-hover;
+  }
 }
