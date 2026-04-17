@@ -1,32 +1,35 @@
 /* =====================================================
-   PIXEL CRAFT MOODLE UI SYSTEM
-   CLEANED VERSION OF YOUR ORIGINAL SCSS
+   PIXEL CRAFT SIMPLE UI SYSTEM
+   Built for EASY editing and control
 ===================================================== */
 
 
 /* =========================
-   DESIGN VARIABLES
+   1. QUICK EDIT ZONE
+   Change these only
 ========================= */
 
-$primary: #e60023;
-$primary-hover: darken($primary, 10%);
-$text-dark: #000;
-$text-light: #fff;
-$transition: all 0.3s ease;
-$radius: 6px;
+$primary: #e60023;        /* Main brand colour */
+$primary-hover: #b8001c;  /* Hover colour */
+$text-dark: #111;         /* Main text */
+$text-light: #fff;        /* Light text */
+$bg: #f5f5f7;             /* Page background */
+$radius: 6px;             /* Rounded corners */
+$speed: 0.25s ease;       /* Animation speed */
 
 
 /* =========================
-   GLOBAL
+   2. GLOBAL BASE
 ========================= */
 
 body {
+  background: $bg;
   color: $text-dark;
 }
 
 a {
   color: $primary;
-  transition: $transition;
+  transition: all $speed;
 
   &:hover {
     color: $primary-hover;
@@ -35,49 +38,55 @@ a {
 
 
 /* =========================
-   NAVIGATION (FIXED CLEANLY)
+   3. NAVIGATION
 ========================= */
 
 .moremenu .nav-link {
-  transition: $transition;
   border-radius: $radius;
+  padding: 8px 12px;
+  transition: all $speed;
 
   &:hover {
-    background-color: $primary;
+    background: $primary;
     color: $text-light;
   }
 }
 
 .moremenu .nav-link.active {
-  background-color: $primary;
+  background: $primary;
   color: $text-light;
 }
 
 
 /* =========================
-   BUTTONS
+   4. BUTTONS
 ========================= */
 
+.btn {
+  border-radius: $radius;
+  transition: all $speed;
+}
+
 .btn-primary {
-  background-color: $primary;
+  background: $primary;
   border-color: $primary;
-  transition: $transition;
 
   &:hover {
-    background-color: $primary-hover;
+    background: $primary-hover;
     border-color: $primary-hover;
   }
 }
 
 
 /* =========================
-   CARD / BLOCK UI
+   5. CARDS / BLOCKS
 ========================= */
 
 .card,
 .block {
   border-radius: $radius;
-  transition: $transition;
+  background: #fff;
+  transition: all $speed;
 
   &:hover {
     transform: translateY(-2px);
@@ -86,37 +95,36 @@ a {
 
 
 /* =========================
-   FORM FIELDS
+   6. FORMS
 ========================= */
 
 .form-control {
-  transition: $transition;
+  border-radius: $radius;
+  transition: all $speed;
 
   &:focus {
     border-color: $primary;
-    box-shadow: 0 0 0 0.1rem rgba(230, 0, 35, 0.2);
+    box-shadow: 0 0 0 2px rgba(230, 0, 35, 0.2);
   }
 }
 
 
 /* =========================
-   TABLES
+   7. TABLES
 ========================= */
 
 .table th {
-  background-color: #f5f5f5;
+  background: #eee;
 }
 
 
 /* =========================
-   YOUR ORIGINAL HOVER FIX (CLEANED)
+   8. SMOOTH HOVER FIX
 ========================= */
 
-.moremenu .nav-tabs .nav-link {
-  transition: $transition;
-}
-
-.moremenu .nav-tabs .nav-link:hover {
-  background-color: $primary;
-  color: $text-light;
+.moremenu .nav-link,
+.btn,
+.card,
+.block {
+  transition: all $speed;
 }
