@@ -385,5 +385,10 @@ a:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+/* =========================
+   COURSE SECTIONS
+========================= */
 
-
+.course-section .section-item {
+border-radius :6px;
+}
